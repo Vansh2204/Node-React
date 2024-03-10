@@ -21,16 +21,16 @@ Fetching the url of Node js created API with Hooks in react.
 ## Hooks 
 
 Here hooks used 
-###useEffect 
-###useState
+`useEffect` 
+`useState`
 
 
 ## Navigation
 
 Routers used for header section 
-###BrowerRouter
-###Routes
-###Route
+`BrowerRouter`
+`Routes`
+`Route`
 
 from react-router-dom
 
