@@ -1,4 +1,8 @@
 body {
+  background-color: rgb(105, 130, 139);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 20;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +11,57 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.card {
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.10)
+}
+
+.corner-button {
+  position: fixed;
+  bottom: 20px;
+  /* Adjust as needed */
+  right: 20px;
+  /* Adjust as needed */
+  padding: 0px 10px;
+  background-color: #0b0b0b;
+  /* Adjust the background color */
+  color: #fff;
+  /* Adjust the text color */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.custom-container {
+  width: 1000px;
+  /* Set the width as required */
+  max-width: 120%;
+  /* Ensure the container is responsive */
+  margin-left: auto;
+  /* Center the container horizontally */
+  margin-right: auto;
+  /* Center the container horizontally */
+}
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.jumbotron {
+  background-image: url('');
+  background-size: cover;
+  color: #1e4565;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.feature {
+  padding: 50px 0;
+  text-align: center;
 }
