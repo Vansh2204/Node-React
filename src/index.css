@@ -22,14 +22,14 @@ body {
 .corner-button {
   position: fixed;
   bottom: 20px;
-  /* Adjust as needed */
+ 
   right: 20px;
-  /* Adjust as needed */
+  
   padding: 0px 10px;
   background-color: #0b0b0b;
-  /* Adjust the background color */
+  
   color: #fff;
-  /* Adjust the text color */
+  
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -37,13 +37,13 @@ body {
 
 .custom-container {
   width: 1000px;
-  /* Set the width as required */
+ 
   max-width: 120%;
-  /* Ensure the container is responsive */
+  
   margin-left: auto;
-  /* Center the container horizontally */
+  
   margin-right: auto;
-  /* Center the container horizontally */
+  
 }
 
 
