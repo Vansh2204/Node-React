@@ -10,12 +10,9 @@ export function EmployeeAdd() {
 
     useEffect(() => {
 
-        if (params.id > 0) {
+        if (params.id) {
             fetch(
-                " http://localhost:5000/employees" + params.id,
-                {
-                    method: "GET",
-                }
+                " http://localhost:5000/employees/" + params.id,
             )
                 .then((res) => {
                     return res.json();
@@ -53,10 +50,9 @@ export function EmployeeAdd() {
                 <div class="row justify-content-center">
                     <div class="p-1">
                         <a href="#" class="btn btn-light mt-3" onClick={() => {
-                            if (params.id > 0) {
+                            if (params.id) {
                                 fetch(
-                                    "http://localhost:5000/employees" +
-                                    "/" +
+                                    "http://localhost:5000/employees/" +
                                     params.id,
                                     {
                                         method: "PUT",
@@ -82,8 +78,8 @@ export function EmployeeAdd() {
                                     navigate("/employee");
                                 });
                             }
-                        }}> {params.id > 0 && "Edit"}
-                            {!(params.id > 0) && "Add "}
+                        }}> {params.id && "Edit "}
+                            {!(params.id) && "Add "}
                             Applicant</a>
                     </div>
 
