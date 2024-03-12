@@ -56,12 +56,12 @@ app.post('/employees', async (req, res) => {
 app.put('/employees/:id',async(req,res)=>{
     try{
         const {id} = req.params;
-        const employee = await Employee.findByIdAndUpdate(id, req.body)
+        const employee = await Employee.updateOne({ _id: id }, req.body);
         if(!employee){
             return res.status(404).json({message: `cannot find employee with ${id}`})
         }
         const updatedEmployee = await Employee.findById(id)
-        res.status(200).json(employee)
+        res.json(employee);
 
     }catch (error){
         res.status(500).json({ message: error.message })
