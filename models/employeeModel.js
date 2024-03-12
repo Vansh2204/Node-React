@@ -4,20 +4,20 @@ const employeeSchema = mongoose.Schema(
     {
         ApplicationName:{
             type: String,
-            required:[true,"Please enter this feild"]
+            required:[true,"Please enter this field"]
         },
         PositionAppliedFor:{
             type :String,
-            required:true,
+            required:false,
 
         },
         ApplicationDate:{
             type:Date,
-            required:true
+            required:false
         },
         Status:{
             type:String,
-            required:true
+            required:false
         }
         
     },
@@ -30,3 +30,4 @@ const Employee = mongoose.model('Employee',employeeSchema)
 
 module.exports = Employee;
 
+//required false , would let the feilds go empty while adding a user while name is true it should be entered
