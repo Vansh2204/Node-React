@@ -9,35 +9,31 @@ app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-// app.get('/users', (req, res) => {
-//     res.json(users);
-// })
-
 
 app.get('/employees', async (req, res) => {
-    try {
+    // try {
         const employees = await Employee.find({});
         res.json(employees)
 
-    } catch (error) {
-        res.json({ message: error.message })
+    // } catch (error) {
+    //     res.json({ message: error.message })
 
-    }
+    // }
 })
 
 app.get('/employees/:id', async (req, res) => {
-    try {
+    // try {
         const {id} = req.params;
         const employee = await Employee.findById(id);
         res.json(employee)
 
-    } catch (error) {
-        res.json({ message: error.message })
+    // } catch (error) {
+    //     res.json({ message: error.message })
 
-    }
+    // }
 })
 
-//CREATE USER
+//CREATE USER------------
 
 app.post('/employees', async (req, res) => {
     try {
@@ -51,7 +47,7 @@ app.post('/employees', async (req, res) => {
     }
 })
 
-//UPDATE USER
+//UPDATE USER------------
 
 app.put('/employees/:id',async(req,res)=>{
     try{
@@ -68,7 +64,7 @@ app.put('/employees/:id',async(req,res)=>{
     }
 })
 
-//DELETE USER
+//DELETE USER------------
 
 app.delete('/employees/:id',async(req,res)=>{
     try{
@@ -84,7 +80,7 @@ app.delete('/employees/:id',async(req,res)=>{
     }
 })
 
-//CONNECTION WITH THE DATABASE (MongoDB Atlas)
+//CONNECTION WITH THE DATABASE (MongoDB Atlas)------------
 
 mongoose.connect('mongodb+srv://vanshhathi2204:rFsoeS254vO4LkXl@vanshapi.7mrdl9s.mongodb.net/Node-API?retryWrites=true&w=majority&appName=VanshAPI')
     .then(() => {
