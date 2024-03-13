@@ -36,7 +36,7 @@ export function EmployeeAdd() {
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label" style={{ color: "black" }}><span class="badge text-bg-secondary">Application Date <span class="text" style={{ color: "red" }}>*</span></span></label>
-                    <input type="text" value={employee.ApplicationDate} class="form-control " id="exampleFormControlInput1" placeholder="YY-MM-DD" onChange={(e) => { setemployee({ ...employee, ApplicationDate: e.target.value }) }} />
+                    <input type="text" value={employee.ApplicationDate} class="form-control " id="exampleFormControlInput1" placeholder="YYYY-MM-DD" onChange={(e) => { setemployee({ ...employee, ApplicationDate: e.target.value }) }} />
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label " style={{ color: "black" }}><span class="badge text-bg-secondary">Status <span class="text" style={{ color: "red" }}>*</span> </span></label>
